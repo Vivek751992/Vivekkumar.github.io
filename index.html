@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vivek Kumar T - Senior Software Engineer | QA Automation Engineer" />
+  <title>Vivek Kumar T | Career Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root{
+  --bg:#07111f;--surface:#0d1b2d;--surface2:#10233a;--text:#eef6ff;--muted:#9eb0c6;
+  --accent:#38bdf8;--accent2:#60a5fa;--border:rgba(255,255,255,.10);--shadow:0 20px 60px rgba(0,0,0,.25)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 80% 0%,#12304f 0,transparent 30%),var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.topbar{position:sticky;top:0;z-index:20;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;background:rgba(7,17,31,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.brand{font-weight:800;font-size:1.35rem;letter-spacing:-.04em}.brand span{color:var(--accent)}
+nav{display:flex;gap:28px;font-size:.88rem;color:var(--muted)}nav a:hover{color:var(--text)}
+#themeToggle{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:10px;width:38px;height:38px;cursor:pointer}
+main{max-width:1180px;margin:auto;padding:0 28px}
+.hero{min-height:680px;display:grid;grid-template-columns:1.45fr .75fr;align-items:center;gap:70px;padding:90px 0}
+.eyebrow{font-size:.73rem;font-weight:800;letter-spacing:.18em;color:var(--accent);margin-bottom:16px}
+h1{font-size:clamp(3.2rem,8vw,6.8rem);line-height:.92;letter-spacing:-.075em;margin-bottom:22px}
+.hero h2{font-size:1.35rem;font-weight:600;color:#d7e7f8}.hero h2 span{color:var(--accent)}
+.lead{max-width:690px;color:var(--muted);font-size:1.05rem;margin:22px 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:12px 18px;border-radius:11px;font-weight:700;font-size:.9rem;border:1px solid var(--border);transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--accent);color:#032033;border-color:var(--accent)}.secondary{background:var(--surface)}
+.hero-card,.glass-card,.skill-card,.education-card{background:linear-gradient(145deg,rgba(16,35,58,.9),rgba(9,25,43,.75));border:1px solid var(--border);box-shadow:var(--shadow);border-radius:24px}
+.hero-card{padding:28px}.status{font-size:.67rem;letter-spacing:.13em;color:var(--muted);margin-bottom:25px}.status span{display:inline-block;width:7px;height:7px;border-radius:50%;background:#4ade80;margin-right:8px}
+.metric{padding:17px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:end;gap:15px}.metric strong{font-size:1.65rem;letter-spacing:-.04em}.metric small{color:var(--muted);text-align:right}
+.section{padding:100px 0}.section-heading{max-width:720px;margin-bottom:38px}.section-heading h2{font-size:clamp(2rem,4vw,3.3rem);line-height:1.05;letter-spacing:-.05em}
+.about-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:20px}.glass-card{padding:30px}.glass-card.large p+p{margin-top:18px}.glass-card p{color:var(--muted)}.glass-card h3{font-size:1.5rem;margin:8px 0}.card-label{font-size:.68rem;color:var(--accent);font-weight:800;letter-spacing:.16em}.pill,.mini-tag{display:inline-block;margin-top:16px;padding:5px 9px;border:1px solid var(--border);border-radius:99px;color:var(--muted);font-size:.75rem}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.skill-card{padding:24px;min-height:185px;transition:.25s}.skill-card:hover{transform:translateY(-5px);border-color:rgba(56,189,248,.45)}.icon{font-size:.68rem;color:var(--accent);font-weight:800}.skill-card h3{margin:12px 0 8px}.skill-card p{color:var(--muted);font-size:.85rem}
+.timeline{position:relative;margin-left:12px;padding-left:34px;border-left:1px solid var(--border)}.timeline-item{position:relative;padding:0 0 60px}.timeline-item:last-child{padding-bottom:0}.dot{position:absolute;left:-40px;top:4px;width:11px;height:11px;border:3px solid var(--bg);background:var(--accent);border-radius:50%;box-shadow:0 0 0 1px var(--accent)}.time{font-size:.7rem;letter-spacing:.15em;color:var(--accent);font-weight:800}.timeline h3{font-size:1.55rem;margin-top:5px}.timeline h4{color:var(--muted);font-weight:500;margin-bottom:15px}.timeline ul{color:var(--muted);padding-left:20px}.timeline li{margin:5px 0}
+.impact{padding-top:70px}.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.impact-grid div{padding:30px;border:1px solid var(--border);border-radius:18px;background:rgba(13,27,45,.65)}.impact-grid strong{display:block;font-size:2.6rem;letter-spacing:-.06em}.impact-grid span{color:var(--muted);font-size:.85rem}
+.education-card{display:flex;justify-content:space-between;align-items:center}.education-card h3{margin:8px 0 2px}.mini-tag{margin:0}
+.contact{padding-bottom:80px}.contact-card{text-align:center;padding:70px 25px;border-radius:28px;background:linear-gradient(135deg,#0d2945,#0b1b2d);border:1px solid var(--border)}.contact-card h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1.05;letter-spacing:-.05em;max-width:760px;margin:0 auto 18px}.contact-card>p:not(.eyebrow){color:var(--muted);max-width:620px;margin:0 auto 28px}.contact-card .actions{justify-content:center}
+footer{max-width:1180px;margin:auto;padding:30px 28px 45px;border-top:1px solid var(--border);display:flex;justify-content:space-between;color:#71849a;font-size:.75rem;gap:20px}
+.light{--bg:#f5f9ff;--surface:#fff;--surface2:#edf5fc;--text:#102033;--muted:#5d7187;--border:rgba(15,38,64,.12);--shadow:0 20px 60px rgba(35,70,100,.12)}
+.light .topbar{background:rgba(245,249,255,.82)}.light body{background:var(--bg)}
+@media(max-width:900px){nav{display:none}.hero{grid-template-columns:1fr;padding:70px 0}.skill-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.impact-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){main{padding:0 18px}.hero{min-height:auto}.section{padding:70px 0}.skill-grid,.impact-grid{grid-template-columns:1fr}.education-card,footer{flex-direction:column;align-items:flex-start}h1{font-size:3.5rem}.hero-card{margin-top:5px}}
+
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">VKT<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#achievements">Impact</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="themeToggle" aria-label="Toggle theme">☾</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">CAREER DASHBOARD · BENGALURU, INDIA</p>
+        <h1>Vivek Kumar T</h1>
+        <h2>Senior Software Engineer <span>·</span> QA Automation</h2>
+        <p class="lead">
+          6+ years of experience building scalable test automation with Selenium WebDriver and Java,
+          with hands-on expertise across UI, API, database testing and CI/CD.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#experience">Explore my career</a>
+          <a class="btn secondary" href="https://www.linkedin.com/in/tvivekkumar" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="status"><span></span> OPEN TO THE NEXT CHALLENGE</div>
+        <div class="metric"><strong>6+</strong><small>Years Experience</small></div>
+        <div class="metric"><strong>350+</strong><small>Automated Test Cases</small></div>
+        <div class="metric"><strong>40–50%</strong><small>Regression Time Reduced</small></div>
+        <div class="metric"><strong>60%+</strong><small>Coverage Improvement</small></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">01 · PROFILE</p>
+        <h2>What I bring to a QA engineering team</h2>
+      </div>
+      <div class="about-grid">
+        <div class="glass-card large">
+          <p>
+            Results-driven Senior Software Engineer specializing in test automation frameworks,
+            continuous testing and reliable release validation. Experienced with Selenium WebDriver,
+            Java, TestNG, Rest Assured, SQL/JDBC, Jenkins and Agile delivery.
+          </p>
+          <p>
+            My focus is on reusable automation, faster regression cycles, stronger coverage and
+            backend validation — connecting UI, API and database testing into a practical quality strategy.
+          </p>
+        </div>
+        <div class="glass-card">
+          <span class="card-label">CURRENT</span>
+          <h3>Wells Fargo</h3>
+          <p>Senior Software Engineer · ADMF Project</p>
+          <span class="pill">Oct 2023 – Present</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">02 · TOOLKIT</p>
+        <h2>Technical skills</h2>
+      </div>
+      <div class="skill-grid">
+        <article class="skill-card"><span class="icon">01</span><h3>Automation</h3><p>Selenium WebDriver · TestNG · JUnit · Cucumber · Playwright (Basics)</p></article>
+        <article class="skill-card"><span class="icon">02</span><h3>Programming</h3><p>Java · Python (Conceptual Knowledge)</p></article>
+        <article class="skill-card"><span class="icon">03</span><h3>Frameworks</h3><p>POM · Data-Driven · Hybrid · BDD · WAF</p></article>
+        <article class="skill-card"><span class="icon">04</span><h3>API Testing</h3><p>Rest Assured · Postman · REST API Automation</p></article>
+        <article class="skill-card"><span class="icon">05</span><h3>Database</h3><p>SQL · Oracle · SQL Server · JDBC · Backend Validation</p></article>
+        <article class="skill-card"><span class="icon">06</span><h3>DevOps & CI/CD</h3><p>Jenkins · Continuous Integration · Continuous Testing</p></article>
+        <article class="skill-card"><span class="icon">07</span><h3>Tools</h3><p>Maven · Git · GitHub · Jira</p></article>
+        <article class="skill-card"><span class="icon">08</span><h3>Testing</h3><p>Functional · Regression · Smoke · Integration · Cross-Browser</p></article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">03 · CAREER</p>
+        <h2>Experience timeline</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item current">
+          <div class="dot"></div>
+          <div class="time">OCT 2023 — PRESENT</div>
+          <h3>Senior Software Engineer</h3>
+          <h4>Wells Fargo · ADMF Project · Bengaluru</h4>
+          <ul>
+            <li>Designed scalable Selenium WebDriver frameworks using Java.</li>
+            <li>Automated 350+ end-to-end test cases, improving coverage by 60%+.</li>
+            <li>Reduced regression execution time by 40–50% through optimized automation.</li>
+            <li>Integrated automation suites with Jenkins CI/CD pipelines.</li>
+            <li>Applied POM and reusable components for maintainability.</li>
+            <li>Contributed to test strategy, sprint planning and defect tracking in Jira.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <div class="dot"></div>
+          <div class="time">JUL 2021 — OCT 2023</div>
+          <h3>Senior Engineer</h3>
+          <h4>Apexon · Client: Wells Fargo · Bengaluru</h4>
+          <ul>
+            <li>Developed Selenium WebDriver + Java + TestNG automation scripts.</li>
+            <li>Automated regression and smoke suites to improve release cycles.</li>
+            <li>Performed database testing using SQL queries.</li>
+            <li>Contributed to CI/CD execution via Jenkins.</li>
+            <li>Participated in Agile ceremonies and defect management.</li>
+          </ul>
+        </article>
+        <article class="timeline-item">
+          <div class="dot"></div>
+          <div class="time">FEB 2020 — JUN 2021</div>
+          <h3>Software Test Engineer</h3>
+          <h4>AgreeYa Solutions · Client: Verizon · Chennai</h4>
+          <ul>
+            <li>Built automation scripts using Selenium WebDriver and TestNG.</li>
+            <li>Executed functional, regression and cross-browser testing.</li>
+            <li>Conducted API testing using Postman.</li>
+            <li>Validated backend data with SQL queries.</li>
+            <li>Increased automation coverage and reduced manual effort by 30%+.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="achievements" class="section impact">
+      <div class="section-heading">
+        <p class="eyebrow">04 · IMPACT</p>
+        <h2>Results that tell the story</h2>
+      </div>
+      <div class="impact-grid">
+        <div><strong>350+</strong><span>test cases automated</span></div>
+        <div><strong>60%+</strong><span>test coverage improvement</span></div>
+        <div><strong>40–50%</strong><span>regression cycle reduction</span></div>
+        <div><strong>30%+</strong><span>manual effort reduced</span></div>
+      </div>
+    </section>
+
+    <section class="section education">
+      <div class="section-heading">
+        <p class="eyebrow">05 · EDUCATION</p>
+        <h2>Foundation</h2>
+      </div>
+      <div class="education-card glass-card">
+        <div>
+          <span class="card-label">2012</span>
+          <h3>Bachelor of Commerce (Computer Applications)</h3>
+          <p>Bharathiar University</p>
+        </div>
+        <div class="mini-tag">B.Com (CA)</div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="contact-card">
+        <p class="eyebrow">06 · CONNECT</p>
+        <h2>Let's build better quality into every release.</h2>
+        <p>For professional opportunities, connect with me through LinkedIn or email.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://www.linkedin.com/in/tvivekkumar" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+          <a class="btn secondary" href="mailto:vivekkumart07051992@gmail.com">Email me</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Vivek Kumar T</span>
+    <span>QA Automation · Java · Selenium · API · Database · CI/CD</span>
+  </footer>
+
+  <script>
+const toggle = document.getElementById('themeToggle');
+const saved = localStorage.getItem('theme');
+if(saved === 'light') document.documentElement.classList.add('light');
+
+toggle.addEventListener('click', () => {
+  document.documentElement.classList.toggle('light');
+  localStorage.setItem('theme',
+    document.documentElement.classList.contains('light') ? 'light' : 'dark'
+  );
+  toggle.textContent = document.documentElement.classList.contains('light') ? '☀' : '☾';
+});
+
+</script>
+</body>
+</html>
